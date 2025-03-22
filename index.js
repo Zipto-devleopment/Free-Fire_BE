@@ -13,7 +13,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:5173","https://free-fire-be.onrender.com"],
+  origin: ["http://localhost:5173","https://free-fire-be.onrender.com","https://freefire42.vercel.app/"],
 
 }));
 app.use(json());
