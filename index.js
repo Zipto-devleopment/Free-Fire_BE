@@ -13,9 +13,13 @@ const app = express();
 
 
 app.use(cors({
-  origin: ["http://localhost:5173","https://freefire42.vercel.app/","https://freefire42-jsr5jo40y-niks-nimjes-projects.vercel.app/","https://freefire42-git-main-niks-nimjes-projects.vercel.app/"],
-
+  origin: ["http://localhost:5173", "https://freefire42.vercel.app", "https://freefire42-jsr5jo40y-niks-nimjes-projects.vercel.app", "https://freefire42-git-main-niks-nimjes-projects.vercel.app"],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,  // Allow credentials (if needed)
+  allowedHeaders: ["Content-Type", "Authorization"], // Explicitly allow necessary headers
 }));
+
+
 app.use(json());
 app.use(bodyParser.json());
 
