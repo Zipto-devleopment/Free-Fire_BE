@@ -7,6 +7,8 @@ const dotenv=require("dotenv");
 const participentRoutes = require("./routes/participent.routes");
 const joinRoutes = require("./routes/joinRoom.routes");
 dotenv.config()
+const contactRoutes = require("./routes/contactRoutes");
+
 
 
 const app = express();
@@ -23,7 +25,7 @@ app.use(bodyParser.json());
 
 app.use("/participent",participentRoutes)
 app.use("/joinRoom",joinRoutes)
-
+app.use("/contact", contactRoutes);
 
 app.get("/",(req,res)=>{
   res.send("welcome to my api")

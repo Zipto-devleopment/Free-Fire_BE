@@ -31,7 +31,7 @@ const userDetails = async (req, res) => {
 
     try {
         await ParticipentModel.create({ GameFee , GameID, UpiID, screenshot });
-        res.json({ message: "✅ You are a participant successfully" });
+        res.json({ message: " You are a participant successfully" });
     } catch (error) {
         console.error("Database Error:", error);
         res.status(500).json({ message: "❌ Error: Not a participant", error: error.message });
